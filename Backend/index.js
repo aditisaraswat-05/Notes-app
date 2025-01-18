@@ -1,9 +1,14 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import AutRoutes from './routes/Auth.js'
+import DbCon from './utlis/db.js'
+
+
+
 dotenv.config()
 
-
+//mongodb connection
+DbCon()
 const PORT= process.env.PORT
 const app=express()
 
