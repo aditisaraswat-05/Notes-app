@@ -13,6 +13,9 @@ const PORT= process.env.PORT
 const app=express()
 
 
+app.use(express.json())
+
+
 app.use('/auth',AutRoutes)
 
 app.get('/',(req,res)=>{
